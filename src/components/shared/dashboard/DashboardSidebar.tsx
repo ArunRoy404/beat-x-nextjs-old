@@ -100,7 +100,7 @@ export function DashboardSidebar({
                 backgroundRepeat: "no-repeat",
             }}
             // Set inner wrapper transparent to let the container's background image shine through
-            className="[&_[data-slot=sidebar-inner]]:bg-transparent text-white border-r border-[#004B56]"
+            className="[&_[data-slot=sidebar-inner]]:bg-transparent text-white border-0!"
             {...props}
         >
             {/* Sidebar Header Section - holds the full or single favicon logo and subtitles */}

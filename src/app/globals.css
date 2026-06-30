@@ -15,6 +15,7 @@
   --color-whitetext: var(--whitetext); /* whitetext color mapping */
   --color-light-whitetext: var(--light-whitetext); /* light-whitetext color mapping */
   --color-search-bg: var(--search-bg); /* search-bg color mapping */
+  --color-search-btn-bg: var(--search-btn-bg); /* search-btn-bg color mapping */
   --color-green-success: var(--green-success); /* green-success color mapping */
   --color-red-error: var(--red-error); /* red-error color mapping */
   --color-yelow-warning: var(--yelow-warning); /* yelow-warning color mapping */
@@ -77,6 +78,7 @@
   --whitetext: #FFF; /* whitetext: #FFF */
   --light-whitetext: #FFFFFF66; /* light-whitetext: #FFFFFF66 */
   --search-bg: rgba(14, 14, 14, 0.20); /* search-bg: rgba(14, 14, 14, 0.20) */
+  --search-btn-bg: #1E245766; /* search-btn-bg: #1E245766 */
   --green-success: #34C759; /* green-success: #34C759 */
   --red-error: #ED1010; /* red-error: #ED1010 */
   --yelow-warning: #FFAE00; /* yelow-warning: #FFAE00 */
