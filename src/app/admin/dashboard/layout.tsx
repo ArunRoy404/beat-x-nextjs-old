@@ -1,6 +1,7 @@
 "use client"
 
 import { DashboardNavbar } from "@/components/shared/dashboard/DashboardNavbar"
+import DashboardOutlet from "@/components/shared/dashboard/DashboardOutlet"
 import { DashboardSidebar } from "@/components/shared/dashboard/DashboardSidebar"
 import {
     SidebarInset,
@@ -12,13 +13,21 @@ const AdminDashboardLayout = ({ children }: { children: React.ReactNode }) => {
     const navGroups = useAdminNavStore((state) => state.navGroups)
 
     return (
-        <SidebarProvider>
+        <SidebarProvider
+            style={{
+                backgroundImage: "url('/bg-images/dashboard_bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}
+            className="min-h-screen w-full bg-background"
+        >
             <DashboardSidebar navGroups={navGroups} />
-            <SidebarInset>
+            <SidebarInset className="max-h-screen h-screen overflow-hidden flex flex-col bg-transparent!">
                 <DashboardNavbar />
-                <main className="flex flex-1 flex-col gap-6 py-8 px-6">
+                <DashboardOutlet>
                     {children}
-                </main>
+                </DashboardOutlet>
             </SidebarInset>
         </SidebarProvider>
     )
