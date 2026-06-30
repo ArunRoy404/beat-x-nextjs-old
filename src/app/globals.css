@@ -22,6 +22,8 @@
   --color-mdal-footer-bg: var(--mdal-footer-bg); /* mdal-footer-bg color mapping */
   --color-button-bg: var(--button-bg); /* button-bg color mapping */
 
+  --color-button-text: var(--button-text); /* button-text color mapping */
+
   /* --- CORE SHADCN MAPPINGS --- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -81,6 +83,7 @@
   --modal-header-bg: linear-gradient(135deg, rgba(58, 223, 250, 0.08) 0%, rgba(204, 151, 255, 0.06) 100%); /* modal-header-bg */
   --mdal-footer-bg: #1A1A19; /* mdal-footer-bg: #1A1A19 */
   --border-radius: 32px; /* border-radius: 32px */
+  --button-text: #004B56; /* button-text: #004B56 */
   --button-bg: var(--Button-Background, linear-gradient(270deg, #3ADFFA 0%, #B1FE4D 100%)); /* button-bg */
 
   /* --- SHADCN CORE VARIABLES (DARK THEME OVERRIDES) --- */
