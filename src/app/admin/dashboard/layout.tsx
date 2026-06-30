@@ -16,7 +16,7 @@ const AdminDashboardLayout = ({ children }: { children: React.ReactNode }) => {
             <DashboardSidebar navGroups={navGroups} />
             <SidebarInset>
                 <DashboardNavbar />
-                <main className="flex flex-1 flex-col gap-4 p-4 pt-0">
+                <main className="flex flex-1 flex-col gap-6 py-8 px-6">
                     {children}
                 </main>
             </SidebarInset>
