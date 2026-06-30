@@ -24,6 +24,7 @@
   --color-button-bg: var(--button-bg); /* button-bg color mapping */
 
   --color-button-text: var(--button-text); /* button-text color mapping */
+  --color-overlay-backdrop: var(--overlay-backdrop); /* overlay-backdrop color mapping */
 
   /* --- CORE SHADCN MAPPINGS --- */
   --color-background: var(--background);
@@ -87,6 +88,9 @@
   --border-radius: 32px; /* border-radius: 32px */
   --button-text: #004B56; /* button-text: #004B56 */
   --button-bg: var(--Button-Background, linear-gradient(270deg, #3ADFFA 0%, #B1FE4D 100%)); /* button-bg */
+  --overlay-backdrop: rgba(0, 0, 0, 0.6); /* overlay-backdrop */
+  --upload-banner-bg: linear-gradient(270deg, rgba(26, 26, 25, 0.4) 0%, rgba(30, 36, 87, 0.3) 100%); /* upload-banner-bg */
+  --card-bg-style: linear-gradient(0deg, rgba(14, 14, 14, 0.85) 0%, rgba(14, 14, 14, 0.85) 100%), url('/bg-images/card_bg.png') 0px -150.505px / 100% 252.809% no-repeat, #0E0E0E; /* card-bg-style */
 
   /* --- SHADCN CORE VARIABLES (DARK THEME OVERRIDES) --- */
   --background: #1A1A19; /* background: #1A1A19 */
@@ -137,4 +141,4 @@
 html, body {
   margin: 0;
   padding: 0;
-}
+} 
