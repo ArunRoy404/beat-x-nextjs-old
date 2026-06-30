@@ -55,7 +55,7 @@ export function DashboardNavbar({
         >
             {/* Left side: Sidebar Trigger, Title and Subtitle */}
             <div className="flex items-center gap-3 md:gap-4 min-w-0">
-                <SidebarTrigger className="text-white bg-search-btn-bg border border-button-text hover:bg-secondary/20 hover:text-secondary rounded-[8px] h-9 w-9 shrink-0 cursor-pointer" />
+                <SidebarTrigger className="text-white bg-search-btn-bg hover:bg-secondary/20 hover:text-secondary rounded-[8px] h-9 w-9 shrink-0 cursor-pointer" />
                 <div className="flex flex-col min-w-0">
                     <h1
                         style={{
@@ -79,7 +79,7 @@ export function DashboardNavbar({
                 <button
                     onClick={onSearchClick}
                     aria-label="Search"
-                    className="flex items-center justify-center bg-search-btn-bg backdrop-blur-md border border-button-text hover:bg-secondary/20 hover:text-secondary rounded-[12px] p-2 md:p-3 transition-all duration-150 cursor-pointer"
+                    className="flex items-center justify-center bg-search-btn-bg backdrop-blur-md hover:bg-secondary/20 hover:text-secondary rounded-[12px] p-2 md:p-3 transition-all duration-150 cursor-pointer"
                 >
                     <HugeiconsIcon icon={Search01Icon} className="w-5 h-5" strokeWidth={2} />
                 </button>
@@ -88,7 +88,7 @@ export function DashboardNavbar({
                 <button
                     onClick={onNotificationsClick}
                     aria-label="Notifications"
-                    className="relative flex items-center justify-center bg-search-btn-bg backdrop-blur-md border border-button-text hover:bg-secondary/20 hover:text-secondary rounded-[12px] p-2 md:p-3 transition-all duration-150 cursor-pointer"
+                    className="relative flex items-center justify-center bg-search-btn-bg backdrop-blur-md hover:bg-secondary/20 hover:text-secondary rounded-[12px] p-2 md:p-3 transition-all duration-150 cursor-pointer"
                 >
                     <HugeiconsIcon icon={Notification01Icon} className="w-5 h-5 text-secondary" strokeWidth={2} />
                     {notificationCount > 0 && (
