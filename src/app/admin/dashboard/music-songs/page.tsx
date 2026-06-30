@@ -18,6 +18,7 @@ import {
 import { useMusicStore } from "@/store/useMusicStore"
 import { Song } from "@/dummyData/musicData"
 import { cn } from "@/lib/utils"
+import MusicDetails from "@/components/admin/musicManagement/MusicDetails"
 
 export default function AdminDashboardMusicManagementPage() {
     const {
@@ -857,7 +858,21 @@ export default function AdminDashboardMusicManagementPage() {
             )}
 
             {/* 3. Song Details Modal */}
-            {isDetailsModalOpen && activeSong && (
+            {isDetailsModalOpen && activeSong && activeSong.status === "Published" ? (
+                <MusicDetails
+                    isOpen={isDetailsModalOpen}
+                    onClose={() => setIsDetailsModalOpen(false)}
+                    song={activeSong}
+                    onDelete={(id) => {
+                        setIsDetailsModalOpen(false)
+                        setIsDeleteConfirmOpen(true)
+                    }}
+                    onSave={(id, updatedData) => {
+                        editSong(id, updatedData)
+                        setActiveSong((prev) => prev ? { ...prev, ...updatedData } : null)
+                    }}
+                />
+            ) : isDetailsModalOpen && activeSong ? (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
                     {/* Backdrop */}
                     <div 
@@ -964,7 +979,7 @@ export default function AdminDashboardMusicManagementPage() {
                         </div>
                     </div>
                 </div>
-            )}
+            ) : null}
 
             {/* 4. Delete Confirmation Modal */}
             {isDeleteConfirmOpen && activeSong && (
