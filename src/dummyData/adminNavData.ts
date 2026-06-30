@@ -1,4 +1,4 @@
-import * as Icons from "@hugeicons/core-free-icons"
+import * as Icons from "@/icons/DashboardIcons"
 
 export interface DummyNavItem {
   title: string
