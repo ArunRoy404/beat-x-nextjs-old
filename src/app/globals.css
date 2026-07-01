@@ -5,6 +5,28 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* --- CUSTOM THEME COLOR MAPPINGS --- */
+  --color-primary: var(--primary); /* primary color mapping */
+  --color-secondary: var(--secondary); /* secondary color mapping */
+  --color-light-gray: var(--light-gray); /* light-gray color mapping */
+  --color-dark-gray: var(--dark-gray); /* dark-gray color mapping */
+  --color-border: var(--border); /* border color mapping */
+  --color-dark-accent: var(--dark-accent); /* dark-accent color mapping */
+  --color-whitetext: var(--whitetext); /* whitetext color mapping */
+  --color-light-whitetext: var(--light-whitetext); /* light-whitetext color mapping */
+  --color-search-bg: var(--search-bg); /* search-bg color mapping */
+  --color-search-btn-bg: var(--search-btn-bg); /* search-btn-bg color mapping */
+  --color-green-success: var(--green-success); /* green-success color mapping */
+  --color-red-error: var(--red-error); /* red-error color mapping */
+  --color-yelow-warning: var(--yelow-warning); /* yelow-warning color mapping */
+  --color-modal-header-bg: var(--modal-header-bg); /* modal-header-bg color mapping */
+  --color-mdal-footer-bg: var(--mdal-footer-bg); /* mdal-footer-bg color mapping */
+  --color-button-bg: var(--button-bg); /* button-bg color mapping */
+
+  --color-button-text: var(--button-text); /* button-text color mapping */
+  --color-overlay-backdrop: var(--overlay-backdrop); /* overlay-backdrop color mapping */
+
+  /* --- CORE SHADCN MAPPINGS --- */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -25,20 +47,18 @@
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
   --color-input: var(--input);
-  --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  /* --- RADIUS MAPPINGS --- */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -49,72 +69,60 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  /* --- CUSTOM THEME COLORS --- */
+  --primary: #CC97FF; /* primary: #CC97FF */
+  --secondary: #3ADFFA; /* secondary: #3ADFFA */
+  --light-gray: #ADAAAA; /* light-gray: #ADAAAA */
+  --dark-gray: #6B6B6B; /* dark-gray: #6B6B6B */
+  --border: #6B6B6B; /* border: #6B6B6B */
+  --dark-accent: #20201F; /* dark-accent: #20201F */
+  --whitetext: #FFF; /* whitetext: #FFF */
+  --light-whitetext: #FFFFFF66; /* light-whitetext: #FFFFFF66 */
+  --search-bg: rgba(14, 14, 14, 0.20); /* search-bg: rgba(14, 14, 14, 0.20) */
+  --search-btn-bg: #1E245766; /* search-btn-bg: #1E245766 */
+  --green-success: #34C759; /* green-success: #34C759 */
+  --red-error: #ED1010; /* red-error: #ED1010 */
+  --yelow-warning: #FFAE00; /* yelow-warning: #FFAE00 */
+  --modal-header-bg: linear-gradient(135deg, rgba(58, 223, 250, 0.08) 0%, rgba(204, 151, 255, 0.06) 100%); /* modal-header-bg */
+  --mdal-footer-bg: #1A1A19; /* mdal-footer-bg: #1A1A19 */
+  --border-radius: 32px; /* border-radius: 32px */
+  --button-text: #004B56; /* button-text: #004B56 */
+  --button-bg: var(--Button-Background, linear-gradient(270deg, #3ADFFA 0%, #B1FE4D 100%)); /* button-bg */
+  --overlay-backdrop: rgba(0, 0, 0, 0.6); /* overlay-backdrop */
+  --upload-banner-bg: linear-gradient(270deg, rgba(26, 26, 25, 0.4) 0%, rgba(30, 36, 87, 0.3) 100%); /* upload-banner-bg */
+  --card-bg-style: linear-gradient(0deg, rgba(14, 14, 14, 0.85) 0%, rgba(14, 14, 14, 0.85) 100%), url('/bg-images/card_bg.png') 0px -150.505px / 100% 252.809% no-repeat, #0E0E0E; /* card-bg-style */
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* --- SHADCN CORE VARIABLES (DARK THEME OVERRIDES) --- */
+  --background: #1A1A19; /* background: #1A1A19 */
+  --foreground: #FFF; /* foreground: #FFF */
+  --card: #20201F; /* card: #20201F */
+  --card-foreground: #FFF; /* card-foreground: #FFF */
+  --popover: #20201F; /* popover: #20201F */
+  --popover-foreground: #FFF; /* popover-foreground: #FFF */
+  --primary-foreground: #1A1A19; /* primary-foreground: #1A1A19 */
+  --secondary-foreground: #1A1A19; /* secondary-foreground: #1A1A19 */
+  --muted: #20201F; /* muted: #20201F */
+  --muted-foreground: #ADAAAA; /* muted-foreground: #ADAAAA */
+  --accent: #20201F; /* accent: #20201F */
+  --accent-foreground: #FFF; /* accent-foreground: #FFF */
+  --destructive: #ED1010; /* destructive: #ED1010 */
+  --destructive-foreground: #FFF; /* destructive-foreground: #FFF */
+  --input: #6B6B6B; /* input: #6B6B6B */
+  --ring: #CC97FF; /* ring: #CC97FF */
+  --chart-1: #CC97FF; /* chart-1: #CC97FF */
+  --chart-2: #3ADFFA; /* chart-2: #3ADFFA */
+  --chart-3: #34C759; /* chart-3: #34C759 */
+  --chart-4: #FFAE00; /* chart-4: #FFAE00 */
+  --chart-5: #6B6B6B; /* chart-5: #6B6B6B */
+  --radius: 32px; /* radius: 32px */
+  --sidebar: #1A1A19; /* sidebar: #1A1A19 */
+  --sidebar-foreground: #FFF; /* sidebar-foreground: #FFF */
+  --sidebar-primary: #CC97FF; /* sidebar-primary: #CC97FF */
+  --sidebar-primary-foreground: #1A1A19; /* sidebar-primary-foreground: #1A1A19 */
+  --sidebar-accent: #20201F; /* sidebar-accent: #20201F */
+  --sidebar-accent-foreground: #FFF; /* sidebar-accent-foreground: #FFF */
+  --sidebar-border: #6B6B6B; /* sidebar-border: #6B6B6B */
+  --sidebar-ring: #CC97FF; /* sidebar-ring: #CC97FF */
 }
 
 @layer base {
@@ -128,3 +136,9 @@
     @apply font-sans;
   }
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+} 
